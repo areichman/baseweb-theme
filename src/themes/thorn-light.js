@@ -27,6 +27,9 @@ const primitives = {
 const overrides = {
   borders: {
     buttonBorderRadius: '4px',
+  },
+  colors: {
+    borderSelected: coral400,
   }
 };
 
