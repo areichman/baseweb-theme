@@ -1,5 +1,4 @@
 import {BaseProvider} from 'baseui';
-import {StatefulInput} from 'baseui/input';
 import {Client as Styletron} from 'styletron-engine-atomic';
 import {Provider as StyletronProvider} from 'styletron-react';
 

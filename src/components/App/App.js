@@ -1,7 +1,6 @@
 import { Button } from "baseui/button";
 import AppTheme from '../AppTheme/AppTheme'
 import ThornLightTheme from '../../themes/thorn-light'
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
