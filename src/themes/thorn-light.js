@@ -1,4 +1,4 @@
-import {createTheme} from 'baseui';
+import { createTheme } from 'baseui';
 
 // thorn brand colors
 // shades generated via https://www.crispedge.com/color-shades-generator
@@ -46,6 +46,7 @@ const primitives = {
 const overrides = {
   borders: {
     buttonBorderRadius: '4px',
+    surfaceBorderRadius: '4px',
   },
   colors: {
     // buttonPrimaryFill: coral,
@@ -62,11 +63,11 @@ const overrides = {
     buttonTertiaryHover: mint700,
     buttonTertiaryActive: mint600,
 
-    borderSelected: coral400,
+    borderSelected: coral,
   }
 };
 
 const theme = createTheme(primitives, overrides);
 // console.log(theme)
 
-export default theme
+export default theme;
