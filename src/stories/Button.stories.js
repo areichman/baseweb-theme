@@ -6,11 +6,11 @@ export const Basic = (args) => (
   <Button {...args}>Click Me</Button>
 )
 
-export const Styled = () => {
+export const Styled = (args) => {
   const StyledButton = styled(Button)`
     width: 100%;
   `;
-  return <StyledButton>Styled Button</StyledButton>;
+  return <StyledButton {...args}>Styled Button</StyledButton>;
 }
 
 export const All = () => (

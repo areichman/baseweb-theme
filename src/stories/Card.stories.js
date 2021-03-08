@@ -22,6 +22,12 @@ export const Styled = () => (
 const metadata = {
   title: 'Card',
   component: Card,
+  parameters:{
+    controls: {
+      disabled: true,
+      hideNoControlsWarning: true,
+    },
+  },
 }
 
 export default metadata;
