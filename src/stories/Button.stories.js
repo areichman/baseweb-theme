@@ -18,7 +18,7 @@ export const All = () => (
     <Button>Primary</Button>&nbsp;
     <Button kind="secondary">Secondary</Button>&nbsp;
     <Button kind="tertiary">Tertiary</Button>&nbsp;
-    <Button kind="minimal">Minimal</Button>&nbsp;
+    <Button disabled>Disabled</Button>&nbsp;
   </React.Fragment>
 )
 
@@ -40,7 +40,7 @@ const metadata = {
       },
       control: {
         type: 'inline-radio',
-        options: ['primary', 'secondary', 'tertiary', 'minimal']
+        options: ['primary', 'secondary', 'tertiary']
       },
       defaultValue: 'primary',
     },
