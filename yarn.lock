@@ -4167,10 +4167,10 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
-baseui@^9.110.0:
-  version "9.110.0"
-  resolved "https://registry.yarnpkg.com/baseui/-/baseui-9.110.0.tgz#3588e51ed9f368785687428060abc3e9855197dc"
-  integrity sha512-hhr3JpR9JH5E9z7gLBpbmjfsHSYjujbV3aelWiEKhY97KF8AUqF34SkHO16k3xkQC6bj+ELZrTQaY0c6uIRLhw==
+baseui@^9.114.0:
+  version "9.114.0"
+  resolved "https://registry.yarnpkg.com/baseui/-/baseui-9.114.0.tgz#a1d9a55d0d13a1987099e8b924e22a21b5b97ae0"
+  integrity sha512-xCcltnf9EGh5stSH6aizCVD+bl7Nn2NDOvSRSpN7yDumzL1mXYlFSei44TndrXIo5s2uSr+Y4D2mCw8GCAdUTQ==
   dependencies:
     "@date-io/date-fns" "^2.6.2"
     card-validator "^6.2.0"
@@ -4184,7 +4184,7 @@ baseui@^9.110.0:
     react-focus-lock "^2.2.1"
     react-input-mask "^2.0.4"
     react-is "^16.8.6"
-    react-movable "^2.4.0"
+    react-movable "^2.5.4"
     react-multi-ref "^1.0.0"
     react-range "^1.8.0"
     react-uid "^2.3.0"
@@ -11936,10 +11936,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-movable@^2.4.0:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/react-movable/-/react-movable-2.5.3.tgz#9510139c4762d783117d34fd2d816d3d63180113"
-  integrity sha512-CazVL7eN4QTAEPwBlcp9101SAytzakpePa3b/lLpsTZyJn3z1uRbqiWA/NTQDjPvPj8h9ws8j8uUr8TBJTiJiw==
+react-movable@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/react-movable/-/react-movable-2.5.4.tgz#1c28e8291476ab19b8625d06b60f97a89dd85a45"
+  integrity sha512-F+Ml4Il9S7uyY2Nr/UzwnXxWewwsHdQkmwgzAjk+Dsz73sy2yCJk7GkQkdqmh8W6XXTlviepz1VA0eHUWh9MZQ==
 
 react-multi-ref@^1.0.0:
   version "1.0.0"
