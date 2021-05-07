@@ -1,5 +1,5 @@
 import AppTheme from '../src/components/AppTheme/AppTheme'
-import ThornLightTheme from '../src/themes/thorn-light'
+import { LightTheme } from '../src/themes/thorn-light'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -7,7 +7,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <AppTheme theme={ThornLightTheme}>
+    <AppTheme theme={LightTheme}>
       <Story />
     </AppTheme>
   ),
