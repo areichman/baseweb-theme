@@ -17,6 +17,20 @@ const CardOverrides = {
   }
 }
 
+const ButtonOverrides = {
+  BaseButton: {
+    style: {
+      maxWidth: '150px',
+    }
+  }
+}
+
+const ButtonLabel = styled('span', () => ({
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+}))
+
 const InputOverrides = {
   Root: {
     style: {
@@ -95,6 +109,12 @@ function SearchFilter({ label, options = [], /* radio = false */ }) {
   const displayedFilters = options
     .filter((opt) => (!inputValue || opt.toLowerCase().includes(inputValue.toLowerCase())))
 
+  const selectedFilters = Object.entries(filters)
+    .filter(([key, val]) => !!val)
+    .map(([key]) => key)
+
+  const displayedLabel = selectedFilters.length > 0 ? selectedFilters.join(', ') : label
+
   const content = (/*{ close }*/) => (
     <Card overrides={CardOverrides}>
       <Input
@@ -141,8 +161,11 @@ function SearchFilter({ label, options = [], /* radio = false */ }) {
         size={SIZE.compact}
         shape={SHAPE.pill}
         endEnhancer={() => <ChevronDown size={24} />}
+        overrides={ButtonOverrides}
       >
-        {label}
+        <ButtonLabel>
+          {displayedLabel}
+        </ButtonLabel>
       </Button>
     </StatefulPopover>
   )
