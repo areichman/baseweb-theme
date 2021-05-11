@@ -1,15 +1,15 @@
 import { Button } from 'baseui/button';
 import { ChevronDown } from 'baseui/icon';
-import { StatefulPopover, PLACEMENT } from 'baseui/popover';
+import { StatefulPopover } from 'baseui/popover';
 
-function Dropdown() {
+function Dropdown({ placement }) {
   const content = (/*{ close }*/) => (
     <div style={{padding: '5px'}}>Hello world!</div>
   )
 
   return (
     <div style={{textAlign: 'center', marginTop: '30px'}}>
-      <StatefulPopover placement={PLACEMENT.bottomLeft} content={content}>
+      <StatefulPopover placement={placement} content={content}>
         <Button endEnhancer={() => <ChevronDown size={24} />}>
           Open Menu
         </Button>

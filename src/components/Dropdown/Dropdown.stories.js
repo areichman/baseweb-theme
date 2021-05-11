@@ -9,10 +9,25 @@ export const Basic = (args) => (
 const metadata = {
   title: 'Dropdown',
   component: Dropdown,
-  parameters:{
-    controls: {
-      disabled: true,
-      hideNoControlsWarning: true,
+  argTypes: {
+    label: {
+      table: {
+        type: { summary: 'string' },
+      },
+      control: {
+        type: 'text',
+      },
+      defaultValue: 'Open Menu',
+    },
+    placement: {
+      table: {
+        type: { summary: 'string' },
+      },
+      control: {
+        type: 'inline-radio',
+        options: ['topLeft', 'bottomLeft', 'left', 'right']
+      },
+      defaultValue: 'bottomLeft',
     },
   },
 };
