@@ -10,7 +10,9 @@ import { Input, SIZE as InputSize } from 'baseui/input'
 const CardOverrides = {
   Root: {
     style: {
-      width: '300px'
+      width: '300px',
+      maxHeight: '450px',
+      overflowY: 'auto',
     }
   }
 }
@@ -38,19 +40,24 @@ const CheckboxContainer = styled('div', () => ({
   marginBottom: '20px',
 }))
 
-function StatusFilter() {
-  // TODO: make this list data-driven or based on a config
-  const filterOptions = [
-    {name: 'firstPass', label: 'First Pass'},
-    {name: 'suggested', label: 'Suggested'},
-    {name: 'matched', label: 'Matched'},
-    {name: 'conflict', label: 'Conflict'},
-  ]
+/*
+type FilterOption = {
+  name: string,
+  label: string
+}
 
+interface Props {
+  label: string
+  options: string[]
+  radio: boolean
+}
+*/
+
+function SearchFilter({ label, options = [], /* radio = false */ }) {
   const defaultState = {}
 
-  filterOptions.forEach((filter) => {
-    defaultState[filter.name] = false;
+  options.forEach((opt) => {
+    defaultState[opt] = false;
   })
 
   const [inputValue, setInputValue] = useState()
@@ -65,18 +72,18 @@ function StatusFilter() {
     setFilters(newFilters)
   }
 
-  const selectAll = () => {
+  const handleSelectAll = () => {
     const newFilters = {}
-    filterOptions.forEach((filter) => {
-      newFilters[filter.name] = true;
+    options.forEach((opt) => {
+      newFilters[opt] = true;
     })
     setFilters(newFilters)
   }
 
-  const clearAll = () => {
+  const handleClearAll = () => {
     const newFilters = {}
-    filterOptions.forEach((filter) => {
-      newFilters[filter.name] = false;
+    options.forEach((opt) => {
+      newFilters[opt] = false;
     })
     setFilters(newFilters)
   }
@@ -85,8 +92,8 @@ function StatusFilter() {
     // TODO
   }
 
-  const displayedFilters = filterOptions
-    .filter(({name}) => (!inputValue || name.includes(inputValue)))
+  const displayedFilters = options
+    .filter((opt) => (!inputValue || opt.toLowerCase().includes(inputValue.toLowerCase())))
 
   const content = (/*{ close }*/) => (
     <Card overrides={CardOverrides}>
@@ -99,24 +106,24 @@ function StatusFilter() {
         onChange={handleInputChange}
       />
 
-      <Button kind={KIND.tertiary} size={SIZE.mini} onClick={selectAll}>
+      <Button kind={KIND.tertiary} size={SIZE.mini} onClick={handleSelectAll}>
         Select All
       </Button>
 
-      <Button kind={KIND.tertiary} size={SIZE.mini} onClick={clearAll}>
+      <Button kind={KIND.tertiary} size={SIZE.mini} onClick={handleClearAll}>
         Clear
       </Button>
 
       <CheckboxContainer>
-        {displayedFilters.map(({name, label}) => (
+        {displayedFilters.map((filter) => (
           <Checkbox
-            key={name}
-            name={name}
-            checked={filters[name]}
+            key={filter}
+            name={filter}
+            checked={filters[filter]}
             onChange={handleCheckboxChange}
             overrides={CheckboxOverrides}
           >
-            {label}
+            {filter}
           </Checkbox>
         ))}
       </CheckboxContainer>
@@ -135,10 +142,10 @@ function StatusFilter() {
         shape={SHAPE.pill}
         endEnhancer={() => <ChevronDown size={24} />}
       >
-        Status
+        {label}
       </Button>
     </StatefulPopover>
   )
 }
 
-export default StatusFilter
+export default SearchFilter

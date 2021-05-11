@@ -1,14 +1,15 @@
-import StatusFilter from './StatusFilter';
+import SearchFilter from './SearchFilter'
+import StatusFilter from './StatusFilter'
 
-export const Default = (args) => (
+export const Status = (args) => (
   <div style={{textAlign: 'center', marginTop: '30px'}}>
-    <StatusFilter {...args} />
+    <StatusFilter />
   </div>
 )
 
 const metadata = {
-  title: 'StatusFilter',
-  component: StatusFilter,
+  title: 'SearchFilter',
+  component: SearchFilter,
   parameters:{
     controls: {
       disabled: true,
