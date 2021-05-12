@@ -1,5 +1,5 @@
 import AppTheme from '../src/components/AppTheme/AppTheme'
-import { LightTheme } from '../src/themes/thorn-light'
+import { LightTheme } from '../src/themes/ncmec-light'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

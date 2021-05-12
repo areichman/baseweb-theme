@@ -55,11 +55,6 @@ const CheckboxContainer = styled('div', () => ({
 }))
 
 /*
-type FilterOption = {
-  name: string,
-  label: string
-}
-
 interface Props {
   label: string
   options: string[]
@@ -94,7 +89,7 @@ function SearchFilter({ label, options = [], /* radio = false */ }) {
     setFilters(newFilters)
   }
 
-  const handleClearAll = () => {
+  const handleClear = () => {
     const newFilters = {}
     options.forEach((opt) => {
       newFilters[opt] = false;
@@ -121,16 +116,16 @@ function SearchFilter({ label, options = [], /* radio = false */ }) {
         value={inputValue || ''}
         size={InputSize.compact}
         startEnhancer={<Search size="18px" />}
-        overrides={InputOverrides}
         clearable
         onChange={handleInputChange}
+        overrides={InputOverrides}
       />
 
       <Button kind={KIND.tertiary} size={SIZE.mini} onClick={handleSelectAll}>
         Select All
       </Button>
 
-      <Button kind={KIND.tertiary} size={SIZE.mini} onClick={handleClearAll}>
+      <Button kind={KIND.tertiary} size={SIZE.mini} onClick={handleClear}>
         Clear
       </Button>
 
