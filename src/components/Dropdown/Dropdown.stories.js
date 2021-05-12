@@ -1,8 +1,10 @@
 import Dropdown from './Dropdown';
 
 export const Basic = (args) => (
-  <div style={{textAlign: 'center', marginTop: '30px'}}>
-    <Dropdown {...args} />
+  <div style={{textAlign: 'center'}}>
+    <Dropdown {...args}>
+      <div style={{ padding: '5px' }}>Hello World</div>
+    </Dropdown>
   </div>
 )
 
@@ -11,23 +13,38 @@ const metadata = {
   component: Dropdown,
   argTypes: {
     label: {
-      table: {
-        type: { summary: 'string' },
-      },
       control: {
         type: 'text',
       },
       defaultValue: 'Open Menu',
     },
     placement: {
-      table: {
-        type: { summary: 'string' },
-      },
       control: {
         type: 'inline-radio',
-        options: ['topLeft', 'bottomLeft', 'left', 'right']
+        options: ['bottomLeft', 'topLeft', 'left', 'right']
       },
       defaultValue: 'bottomLeft',
+    },
+    kind: {
+      control: {
+        type: 'inline-radio',
+        options: ['primary', 'secondary', 'tertiary']
+      },
+      defaultValue: 'primary',
+    },
+    size: {
+      control: {
+        type: 'inline-radio',
+        options: ['default', 'compact', 'mini', 'large']
+      },
+      defaultValue: 'default',
+    },
+    shape: {
+      control: {
+        type: 'inline-radio',
+        options: ['default', 'pill']
+      },
+      defaultValue: 'default',
     },
   },
 };
