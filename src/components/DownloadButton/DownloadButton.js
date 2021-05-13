@@ -18,9 +18,11 @@ async function download(file){
 }
 
 function DownloadButton() {
+  // need to be same origin, blob:, or data: URLs
   const files = [
     {name: 'a.txt', url: `data:text/plain;charset=utf8,${encodeURIComponent('Hello a')}`},
     {name: 'b.txt', url: `data:text/plain;charset=utf8,${encodeURIComponent('Hello b')}`},
+    {name: 'c.txt', url: `data:text/plain;charset=utf8,${encodeURIComponent('Hello c')}`},
   ]
 
   const handleClick = async () => {
