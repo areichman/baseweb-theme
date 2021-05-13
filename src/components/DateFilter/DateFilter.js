@@ -4,7 +4,6 @@ import { Select } from 'baseui/select'
 const overrides = {
   Root: {
     style: {
-      display: 'inline-block',
       width: '180px',
     }
   },
