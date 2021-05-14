@@ -1,14 +1,14 @@
-import { Button } from "baseui/button";
+import { LightTheme } from '../../themes/thorn-light'
 import AppTheme from '../AppTheme/AppTheme'
-import ThornLightTheme from '../../themes/thorn-light'
+import AppHeader from '../AppHeader/AppHeader'
+import AppRoutes from '../AppRoutes/AppRoutes'
 import './App.css';
 
 function App() {
   return (
-    <AppTheme theme={ThornLightTheme}>
-      <div className="App">
-        <Button>I'm a BaseWeb Button with a Thorn theme</Button>
-      </div>
+    <AppTheme theme={LightTheme}>
+      <AppHeader />
+      <AppRoutes />
     </AppTheme>
   );
 }

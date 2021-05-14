@@ -1,12 +1,10 @@
 # Base Web Theme Demo
 
-This project demonstrates the use of an `AppTheme` component to style Base Web UI components.
+This project demonstrates the use of an `AppTheme` component to style Base Web
+UI components. Run `yarn storybook` to see the example components.
 
-See `src/components/App` for example usage.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Base Web Info
+This project was bootstrapped with Create React App:
+https://github.com/facebook/create-react-app
 
 Theme basics and properties:
 https://baseweb.design/guides/theming/
