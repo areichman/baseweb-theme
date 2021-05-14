@@ -25,12 +25,6 @@ const ButtonOverrides = {
   }
 }
 
-const ButtonLabel = styled('span', () => ({
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-}))
-
 const InputOverrides = {
   Root: {
     style: {
@@ -54,13 +48,11 @@ const CheckboxContainer = styled('div', () => ({
   marginBottom: '20px',
 }))
 
-/*
-interface Props {
-  label: string
-  options: string[]
-  radio: boolean
-}
-*/
+const ButtonLabel = styled('span', () => ({
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+}))
 
 function SearchFilter({ label, options = [], /* radio = false */ }) {
   const defaultState = {}
