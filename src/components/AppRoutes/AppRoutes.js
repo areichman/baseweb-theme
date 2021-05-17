@@ -1,16 +1,9 @@
-import { useStyletron } from 'baseui'
-
-const getStyles = (theme) => ({
-  padding: '15px',
-})
+import Search from '../Search/Search'
 
 function AppRoutes() {
-  const [css, theme] = useStyletron()
-  const styles = getStyles(theme)
-
   return (
-    <main id="content" className={css(styles)}>
-      App routes
+    <main id="content">
+      <Search />
     </main>
   )
 }

@@ -7,7 +7,7 @@ const getStyles = (theme) => ({
   display: 'flex',
   alignItems: 'center',
   padding: '0 15px',
-}}
+})
 
 function AppHeader() {
   const [css, theme] = useStyletron();
