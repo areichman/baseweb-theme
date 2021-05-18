@@ -1,4 +1,4 @@
-import { LightTheme } from '../../themes/thorn-light'
+import { LightTheme } from '../../themes/ncmec-light'
 import AppTheme from '../AppTheme/AppTheme'
 import AppHeader from '../AppHeader/AppHeader'
 import AppRoutes from '../AppRoutes/AppRoutes'

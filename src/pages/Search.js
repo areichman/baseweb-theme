@@ -1,6 +1,6 @@
 import { useStyletron } from 'baseui'
-import SearchBox from '../SearchBox/SearchBox'
-import SearchResults from '../SearchResults/SearchResults'
+import SearchBox from '../components/SearchBox/SearchBox'
+import SearchResults from '../components/SearchResults/SearchResults'
 
 const getStyles = (theme) => ({
   root: {

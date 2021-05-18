@@ -1,4 +1,4 @@
-import Search from '../Search/Search'
+import Search from '../../pages/Search'
 
 function AppRoutes() {
   return (
