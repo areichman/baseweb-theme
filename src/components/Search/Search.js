@@ -1,4 +1,5 @@
 import { useStyletron } from 'baseui'
+import SearchBox from '../SearchBox/SearchBox'
 import SearchResults from '../SearchResults/SearchResults'
 
 const getStyles = (theme) => ({
@@ -14,6 +15,7 @@ const getStyles = (theme) => ({
   },
   content: {
     flexGrow: 1,
+    width: 'calc(100vw - 300px)',
     height: 'calc(100vh - 56px)',
     overflowY: 'auto',
   },
@@ -22,7 +24,6 @@ const getStyles = (theme) => ({
     top: 0,
     margin: 0,
     padding: '15px',
-    borderBottom: '1px solid #333',
     background: 'white',
   },
   results: {
@@ -40,9 +41,9 @@ function Search() {
         Saved Searches
       </div>
       <div className={css(styles.content)}>
-        <p className={css(styles.filters)}>
-          Search Filters
-        </p>
+        <div className={css(styles.filters)}>
+          <SearchBox />
+        </div>
         <div className={css(styles.results)}>
           <SearchResults />
         </div>
